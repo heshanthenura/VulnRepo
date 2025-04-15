@@ -15,7 +15,11 @@ Bruteforce and find the root SSH password using tools or custom scripts.
 
 ## 🐳 Build
 
-download this folder first
+download this folder from image
+
+https://github.com/heshanthenura/VulnRepo/releases/tag/vuln-img-001
+
+change directory to that folder
 
 ```bash
 docker build -t vuln-ssh-brute .
