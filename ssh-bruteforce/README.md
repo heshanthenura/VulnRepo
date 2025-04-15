@@ -15,7 +15,7 @@ Bruteforce and find the root SSH password using tools or custom scripts.
 
 ## 🐳 Build
 
-download this folder from image
+download image from release
 
 https://github.com/heshanthenura/VulnRepo/releases/tag/vuln-img-001
 
