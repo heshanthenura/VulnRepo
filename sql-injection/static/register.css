@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.navbar {
+  background-color: rgb(216, 216, 216);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 10px;
+  flex-wrap: wrap;
+}
+.navbar h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.nav-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn-wrap > button {
+  padding: 5px 10px;
+  width: 90px;
+  margin: 5px;
+}
+
+.nav-btn-wrap > button > a {
+  text-decoration: none;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.form-container {
+  background-color: white;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-container form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-container form input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+.form-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-container form button:hover {
+  background-color: #555;
+}
+
+.form-container form p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.form-container form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container form a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-btn-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-btn-wrap > button {
+    width: 100%;
+    text-align: left;
+  }
+}

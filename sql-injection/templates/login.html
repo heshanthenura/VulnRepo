@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - PawnShop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="/">PawnShop</a></h1>
+      <div class="nav-btn-wrap">
+        {% if session['username'] %}
+        <button><a href="{{ url_for('logout') }}">LOGOUT</a></button>
+        {% else %}
+        <button><a href="/login">LOGIN</a></button>
+        <button><a href="/register">REGISTER</a></button>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Login</h2>
+
+      <form action="/login" method="post">
+        {% if error_message %}
+        <p style="color: red; font-weight: bold">{{ error_message }}</p>
+        {% endif %}
+        <input type="text" placeholder="Username" required name="username" />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          name="password"
+        />
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="/register">Register</a></p>
+      </form>
+    </div>
+  </body>
+</html>

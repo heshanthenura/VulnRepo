@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - PawnShop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        /* background: linear-gradient(135deg, #f0f0f0, #c9d6ff); */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .welcome-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .welcome-message {
+        font-size: 3.5rem;
+        color: #222;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .welcome-message span {
+        color: #4a90e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="/">PawnShop</a></h1>
+      <div class="nav-btn-wrap">
+        {% if session['username'] %}
+        <button><a href="{{ url_for('logout') }}">LOGOUT</a></button>
+        {% else %}
+        <button><a href="/login">LOGIN</a></button>
+        <button><a href="/register">REGISTER</a></button>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="welcome-container">
+      <div class="welcome-message">
+        Welcome, <span>{{ session['username'] }}</span>!
+      </div>
+    </div>
+  </body>
+</html>

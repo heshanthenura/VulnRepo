@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - PawnShop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='register.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="/">PawnShop</a></h1>
+      <div class="nav-btn-wrap">
+        {% if session['username'] %}
+        <button><a href="{{ url_for('logout') }}">LOGOUT</a></button>
+        {% else %}
+        <button><a href="/login">LOGIN</a></button>
+        <button><a href="/register">REGISTER</a></button>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Register</h2>
+
+      <form action="/register" method="post">
+        {% if error_message %}
+        <p style="color: red">{{ error_message }}</p>
+        {% endif %}
+        <input type="text" placeholder="Full Name" required name="full_name" />
+        <input type="email" placeholder="Email" required name="email" />
+        <input type="text" placeholder="Username" required name="username" />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          name="password"
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          required
+          name="confirm_password"
+        />
+
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="/login">Login</a></p>
+      </form>
+    </div>
+  </body>
+</html>

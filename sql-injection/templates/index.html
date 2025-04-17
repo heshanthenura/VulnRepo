@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawnShop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="/">PawnShop</a></h1>
+      <div class="nav-btn-wrap">
+        {% if session['username'] %}
+        <button><a href="{{ url_for('logout') }}">LOGOUT</a></button>
+        {% else %}
+        <button><a href="/login">LOGIN</a></button>
+        <button><a href="/register">REGISTER</a></button>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Search products..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    {% if query %}
+    <p>You searched for: <strong>{{ query }}</strong></p>
+    {% endif %}
+
+    <div class="products">
+      {% if products %} {% for product in products %}
+      <div class="product-card">
+        <h3>{{ product[1] }}</h3>
+        <p class="price">${{ product[2] }}</p>
+        <button>Buy Now</button>
+      </div>
+      {% endfor %} {% else %}
+      <div class="no-products">
+        <p>No products available</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
