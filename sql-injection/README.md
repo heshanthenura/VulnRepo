@@ -17,7 +17,7 @@ Login as admin or existing user without knowing their original passwords.
 
 download image from release
 
-https://github.com/heshanthenura/VulnRepo/releases/tag/vuln-img-002
+https://github.com/heshanthenura/VulnRepo/releases/download/vuln-img-002/sql-injection.zip
 
 change directory to that folder
 
