@@ -1,4 +1,4 @@
-# **VulnRepo**
+# <p align="center">VulnRepo</p>
 
 A collection of intentionally vulnerable environments, configurations, and tools for security training, penetration testing, and research.
 
