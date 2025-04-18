@@ -1,5 +1,8 @@
 # Database Ports and Default Credentials
 
+> **Disclaimer:**  
+> The port numbers and default credentials listed in this table are based on common default configurations. However, these values may vary across different versions of the respective databases, as well as in customized setups. Always verify the current configurations before use.
+
 | Name                 | Port   | Username      | Password       |
 | -------------------- | ------ | ------------- | -------------- |
 | MySQL                | 3306   | root          | root           |
