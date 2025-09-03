@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body">
+        <h3 class="card-title">{{ profile.name }}</h3>
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Bio:</strong> {{ profile.bio }}</p>
+        <a href="/" class="btn btn-secondary">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

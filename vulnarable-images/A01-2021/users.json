@@ -1,0 +1,102 @@
+[
+  {
+    "id": 17,
+    "username": "alice",
+    "password": "12345",
+    "profile": {
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "bio": "I love cats."
+    }
+  },
+  {
+    "id": 42,
+    "username": "bob",
+    "password": "password",
+    "profile": {
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "bio": "I like pizza."
+    }
+  },
+  {
+    "id": 8,
+    "username": "charlie",
+    "password": "qwerty",
+    "profile": {
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "bio": "Coffee is my fuel."
+    }
+  },
+  {
+    "id": 56,
+    "username": "diana",
+    "password": "letmein",
+    "profile": {
+      "name": "Diana Prince",
+      "email": "diana@example.com",
+      "bio": "Bookworm and traveler."
+    }
+  },
+  {
+    "id": 73,
+    "username": "eve",
+    "password": "123456",
+    "profile": {
+      "name": "Eve Adams",
+      "email": "eve@example.com",
+      "bio": "I love hacking things 😉."
+    }
+  },
+  {
+    "id": 29,
+    "username": "frank",
+    "password": "monkey",
+    "profile": {
+      "name": "Frank Miller",
+      "email": "frank@example.com",
+      "bio": "Basketball is life."
+    }
+  },
+  {
+    "id": 64,
+    "username": "grace",
+    "password": "iloveyou",
+    "profile": {
+      "name": "Grace Hopper",
+      "email": "grace@example.com",
+      "bio": "Coding since the punch-card days."
+    }
+  },
+  {
+    "id": 91,
+    "username": "henry",
+    "password": "dragon",
+    "profile": {
+      "name": "Henry Ford",
+      "email": "henry@example.com",
+      "bio": "Engineer at heart, innovator in spirit."
+    }
+  },
+  {
+    "id": 37,
+    "username": "ivy",
+    "password": "sunshine",
+    "profile": {
+      "name": "Ivy Lane",
+      "email": "ivy@example.com",
+      "bio": "Music keeps me alive."
+    }
+  },
+  {
+    "id": 98,
+    "username": "admin",
+    "password": "admin123",
+    "profile": {
+      "name": "Administrator",
+      "email": "admin@demo.local",
+      "bio": "Superuser with full access."
+    }
+  }
+]
