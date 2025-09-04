@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Without Limit</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        width: 400px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin: 5px 0;
+        width: 90%;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Login Without Limit</h1>
+    </header>
+    <div class="container">
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %}
+      <form method="POST">
+        <input type="text" name="username" placeholder="Username" /><br />
+        <input type="password" name="password" placeholder="Password" /><br />
+        <button type="submit">Login</button>
+      </form>
+      <p><a href="/">Back Home</a></p>
+    </div>
+  </body>
+</html>

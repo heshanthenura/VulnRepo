@@ -1,4 +1,4 @@
-# A1:2025 Vulnerable Demo App Container
+# A03:2021 Vulnerable Demo App Container
 
 This Docker setup simulates a **SQL Injection and Stored XSS vulnerable web app** in Flask by:
 

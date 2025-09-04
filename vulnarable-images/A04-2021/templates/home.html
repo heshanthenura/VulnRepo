@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Rate Limit Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: #3498db;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Flask Secure Design Demo</h1>
+    </header>
+    <div class="container">
+      <h2>Choose a Demo</h2>
+      <a href="/login-nolimit" class="btn">Login Without Limit</a>
+      <a href="/login-limit" class="btn">Login With Rate Limit</a>
+    </div>
+  </body>
+</html>

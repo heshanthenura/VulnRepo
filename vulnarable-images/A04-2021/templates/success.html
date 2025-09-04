@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Success</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+      }
+      .container {
+        width: 400px;
+        margin: 50px auto;
+        background: #d4edda;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #155724;
+      }
+      a {
+        text-decoration: none;
+        color: #155724;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Login Success</h1>
+    </header>
+    <div class="container">
+      <h2>Welcome, {{ username }}!</h2>
+      <p>Login Successful ✅</p>
+      <p><a href="/">Go Home</a></p>
+    </div>
+  </body>
+</html>
