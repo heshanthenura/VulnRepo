@@ -29,8 +29,6 @@ This Docker setup simulates a **login system with and without rate limiting** in
 docker build -t a04:2021 .
 ```
 
----
-
 ## 🚀 Run
 
 Run the container and map port 5000:
