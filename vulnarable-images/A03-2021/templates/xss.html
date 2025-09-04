@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XSS Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      textarea,
+      button {
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+      }
+      button {
+        background: #3498db;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background: #ecf0f1;
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>XSS Review System</h1>
+    </header>
+    <div class="container">
+      <form method="post">
+        <textarea
+          name="msg"
+          placeholder="Write your review..."
+          rows="4"
+        ></textarea
+        ><br />
+        <button type="submit">Post</button>
+      </form>
+
+      <h3>All Reviews:</h3>
+      <ul>
+        {% for cmt in comments %}
+        <li>{{ cmt | safe }}</li>
+        {% endfor %}
+      </ul>
+
+      <a href="/">⬅ Back Home</a>
+    </div>
+  </body>
+</html>
