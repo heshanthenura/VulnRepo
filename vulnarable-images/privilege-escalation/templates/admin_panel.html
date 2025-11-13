@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h3>Admin Panel</h3>
+  <p>View all orders in the system.</p>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Owner</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for o in orders %}
+      <tr>
+        <td>{{ o.id }}</td>
+        <td>{{ o.product }}</td>
+        <td>{{ "%.2f"|format(o.price) }}</td>
+        <td>{{ o.owner }}</td>
+        <td>{{ o.status }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

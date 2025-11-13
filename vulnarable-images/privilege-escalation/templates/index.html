@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h2>OrderManager</h2>
+  <p>
+    Manage customer orders. Sign up to start placing orders or log in if you
+    already have an account.
+  </p>
+  <a class="btn btn-primary" href="{{ url_for('register') }}">Create Account</a>
+  <a class="btn btn-secondary" href="{{ url_for('login') }}">Login</a>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<div class="card p-4 shadow-sm mx-auto" style="max-width: 600px">
+  <h3 class="card-title mb-3">Login</h3>
+  <form method="post" class="row g-3">
+    <div class="col-12">
+      <label class="form-label">Username</label>
+      <input class="form-control" name="username" required />
+    </div>
+    <div class="col-12">
+      <label class="form-label">Password</label>
+      <input class="form-control" type="password" name="password" required />
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary">Login</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h3>Welcome, {{ user.username }}!</h3>
+  <p>Your role: <strong>{{ user.role }}</strong></p>
+  <p>Use the dashboard to manage or view orders.</p>
+</div>
+{% endblock %}

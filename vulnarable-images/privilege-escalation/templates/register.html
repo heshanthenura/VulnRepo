@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<div class="card p-4 shadow-sm mx-auto" style="max-width: 600px">
+  <h3 class="card-title mb-3">Create Account</h3>
+  <form method="post" class="row g-3">
+    <div class="col-12">
+      <label class="form-label">Username</label>
+      <input
+        class="form-control"
+        name="username"
+        required
+        maxlength="80"
+        autocomplete="username"
+      />
+    </div>
+    <div class="col-12">
+      <label class="form-label">Password</label>
+      <input
+        class="form-control"
+        type="password"
+        name="password"
+        required
+        autocomplete="new-password"
+      />
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+  <small class="text-muted mt-2 d-block"
+    >By creating an account you agree to our Terms.</small
+  >
+</div>
+{% endblock %}
